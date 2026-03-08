@@ -1,8 +1,8 @@
-# Union Arquitetura - Tema WordPress
+# Union - Tema WordPress
 
 ## Instalação
 
-1. Crie uma pasta chamada `union-arquitetura` no diretório `wp-content/themes/` do seu WordPress.
+1. Crie uma pasta chamada `union` no diretório `wp-content/themes/` do seu WordPress.
 
 2. Copie todos os arquivos .txt para a pasta, removendo a extensão .txt:
    - style.css.txt → style.css
@@ -20,7 +20,7 @@
 
 3. Crie a estrutura de pastas:
    ```
-   union-arquitetura/
+   union/
    ├── style.css
    ├── functions.php
    ├── header.php
