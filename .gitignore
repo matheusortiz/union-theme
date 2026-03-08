@@ -1,0 +1,49 @@
+# =================================================================
+# .gitignore para Tema WordPress
+#
+# Este arquivo é para um repositório que contém apenas os arquivos do tema.
+# =================================================================
+
+# Diretórios de dependências
+# -----------------------------------------------------------------
+# Para Composer (PHP) e npm/yarn (Node.js)
+/vendor/
+/node_modules/
+
+# Diretórios de build
+# -----------------------------------------------------------------
+# Para assets compilados (ex: de Sass, Webpack, Gulp)
+/dist/
+/build/
+
+# Arquivos de log e temporários
+# -----------------------------------------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Log de debug do WordPress
+debug.log
+
+# Arquivos de sistema
+# -----------------------------------------------------------------
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Arquivos de configuração de IDE e editores
+# -----------------------------------------------------------------
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos compactados e de backup
+# -----------------------------------------------------------------
+*.zip
+*.rar
+*.swo
+*.swp
+*~
+*.bak

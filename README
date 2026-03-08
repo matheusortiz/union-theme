@@ -1,0 +1,107 @@
+# Union Arquitetura - Tema WordPress
+
+## Instalação
+
+1. Crie uma pasta chamada `union-arquitetura` no diretório `wp-content/themes/` do seu WordPress.
+
+2. Copie todos os arquivos .txt para a pasta, removendo a extensão .txt:
+   - style.css.txt → style.css
+   - functions.php.txt → functions.php
+   - header.php.txt → header.php
+   - footer.php.txt → footer.php
+   - front-page.php.txt → front-page.php
+   - index.php.txt → index.php
+   - single.php.txt → single.php
+   - page.php.txt → page.php
+   - single-projeto.php.txt → single-projeto.php
+   - archive-projeto.php.txt → archive-projeto.php
+   - page-contato.php.txt → page-contato.php
+   - assets/js/main.js.txt → assets/js/main.js
+
+3. Crie a estrutura de pastas:
+   ```
+   union-arquitetura/
+   ├── style.css
+   ├── functions.php
+   ├── header.php
+   ├── footer.php
+   ├── front-page.php
+   ├── index.php
+   ├── single.php
+   ├── page.php
+   ├── single-projeto.php
+   ├── archive-projeto.php
+   ├── page-contato.php
+   ├── screenshot.png (opcional - 1200x900px)
+   └── assets/
+       └── js/
+           └── main.js
+   ```
+
+4. Ative o tema em Aparência > Temas no painel do WordPress.
+
+## Configuração
+
+### Logo
+Vá em Aparência > Personalizar > Identidade do Site para adicionar seu logo.
+
+### Menus
+1. Vá em Aparência > Menus
+2. Crie um menu e atribua ao local "Menu Principal"
+
+### Seção Hero
+Personalize em Aparência > Personalizar > Seção Hero:
+- Título
+- Subtítulo
+- Imagem de fundo
+
+### Informações de Contato
+Configure em Aparência > Personalizar > Informações de Contato:
+- E-mail
+- Telefone
+- Endereço
+
+### Redes Sociais
+Configure em Aparência > Personalizar > Redes Sociais
+
+## Custom Post Types
+
+O tema inclui dois tipos de post personalizados:
+
+### Projetos
+- Adicione projetos em Projetos > Adicionar Novo
+- Use categorias de projeto para organizar
+- Campos personalizados disponíveis: cliente, localização, ano, área
+
+### Serviços
+- Adicione serviços em Serviços > Adicionar Novo
+- Use a ordem de menu para controlar a exibição
+
+## Páginas Especiais
+
+### Página de Contato
+1. Crie uma nova página
+2. No editor, selecione o template "Página de Contato"
+3. Publique a página
+
+Para formulário funcional, recomendamos instalar o plugin Contact Form 7.
+
+## Requisitos
+
+- WordPress 5.0+
+- PHP 7.4+
+
+## Plugins Recomendados
+
+- Contact Form 7 (formulário de contato)
+- Advanced Custom Fields (campos personalizados)
+- Yoast SEO (otimização para buscadores)
+- WP Super Cache (cache e performance)
+
+## Suporte
+
+Para suporte, entre em contato com a equipe de desenvolvimento.
+
+---
+
+© 2024 Union Arquitetura e Engenharia
