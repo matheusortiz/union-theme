@@ -216,7 +216,7 @@ function union_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('contact_email', array(
-        'default'           => 'contato@unionarq.com.br',
+        'default'           => 'eng.luana@unionengenharia.com',
         'sanitize_callback' => 'sanitize_email',
     ));
 
@@ -227,7 +227,7 @@ function union_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('contact_phone', array(
-        'default'           => '+55 (11) 99999-9999',
+        'default'           => '(42) 99900-3021',
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
@@ -238,7 +238,7 @@ function union_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_setting('contact_address', array(
-        'default'           => 'Av. Paulista, 1234, São Paulo, SP',
+        'default'           => 'Rua 294, 157, Sala 01 - Meia Praia - Itapema/SC',
         'sanitize_callback' => 'sanitize_text_field',
     ));
 
@@ -322,3 +322,18 @@ add_action('after_setup_theme', 'union_add_image_sizes');
 //     return $current_status;
 // }
 // add_filter('use_block_editor_for_post_type', 'union_disable_gutenberg', 10, 2);
+
+/**
+ * Fallback menu if no menu is assigned
+ */
+function union_fallback_menu() {
+    ?>
+    <ul class="nav-menu">
+        <li><a href="<?php echo esc_url(home_url('/')); ?>">HOME</a></li>
+        <li><a href="<?php echo esc_url(home_url('/projetos')); ?>">PROJETOS</a></li>
+        <li><a href="<?php echo esc_url(home_url('/servicos')); ?>">SERVIÇOS</a></li>
+        <li><a href="<?php echo esc_url(home_url('/sobre')); ?>">SOBRE</a></li>
+        <li><a href="<?php echo esc_url(home_url('/contato')); ?>">CONTATO</a></li>
+    </ul>
+    <?php
+}

@@ -123,7 +123,7 @@ get_header();
                     <?php endif; ?>
                 </div>
                 
-                <a href="<?php echo get_post_type_archive_link('projeto'); ?>" class="btn btn-outline">
+                <a href="<?php echo get_post_type_archive_link('projeto'); ?>" class="btn">
                     TODOS OS PROJETOS
                 </a>
                 

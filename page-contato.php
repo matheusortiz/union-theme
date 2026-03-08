@@ -13,51 +13,43 @@ get_header();
         <div class="contact-grid">
             <div>
                 <p class="section-label">ENTRE EM CONTATO</p>
-                <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 3rem;">
+                <h1 style="font-size: clamp(1.875rem, 4vw, 2.25rem); font-weight: 300; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 3rem;">
                     Vamos Criar Algo<br>Extraordinário
                 </h1>
                 
                 <div class="contact-info">
                     <p class="contact-label">E-MAIL</p>
-                    <a href="mailto:<?php echo esc_attr(get_theme_mod('contact_email', 'contato@unionarq.com.br')); ?>" class="contact-value">
-                        <?php echo esc_html(get_theme_mod('contact_email', 'contato@unionarq.com.br')); ?>
+                    <a href="mailto:<?php echo esc_attr(get_theme_mod('contact_email', 'eng.luana@unionengenharia.com')); ?>" class="contact-value">
+                        <?php echo esc_html(get_theme_mod('contact_email', 'eng.luana@unionengenharia.com')); ?>
                     </a>
                 </div>
                 
                 <div class="contact-info">
                     <p class="contact-label">TELEFONE</p>
-                    <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', get_theme_mod('contact_phone', '+5511999999999'))); ?>" class="contact-value">
-                        <?php echo esc_html(get_theme_mod('contact_phone', '+55 (11) 99999-9999')); ?>
+                    <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', get_theme_mod('contact_phone', '+5542999003021'))); ?>" class="contact-value">
+                        <?php echo esc_html(get_theme_mod('contact_phone', '(42) 99900-3021')); ?>
                     </a>
                 </div>
                 
                 <div class="contact-info">
                     <p class="contact-label">ESCRITÓRIO</p>
                     <address class="contact-value" style="font-style: normal;">
-                        <?php echo nl2br(esc_html(get_theme_mod('contact_address', "Av. Paulista, 1234\nSão Paulo, SP 01310-100"))); ?>
+                        <?php echo nl2br(esc_html(get_theme_mod('contact_address', "Rua 294, 157, Sala 01\nMeia Praia - Itapema/SC"))); ?>
                     </address>
                 </div>
                 
                 <!-- Social Links -->
                 <div style="margin-top: 3rem;">
                     <p class="section-label" style="margin-bottom: 1rem;">SIGA-NOS</p>
-                    <?php $social_links = union_get_social_links(); ?>
-                    <?php if (!empty($social_links)) : ?>
-                        <div style="display: flex; gap: 2rem;">
-                            <?php foreach ($social_links as $network => $url) : ?>
-                                <a href="<?php echo esc_url($url); ?>" target="_blank" rel="noopener noreferrer" 
-                                   style="font-size: 1rem; text-decoration: none; color: var(--foreground);">
-                                    <?php echo ucfirst($network); ?>
-                                </a>
-                            <?php endforeach; ?>
-                        </div>
-                    <?php else : ?>
-                        <div style="display: flex; gap: 2rem;">
-                            <a href="#" style="font-size: 1rem; text-decoration: none; color: var(--foreground);">Instagram</a>
-                            <a href="#" style="font-size: 1rem; text-decoration: none; color: var(--foreground);">LinkedIn</a>
-                            <a href="#" style="font-size: 1rem; text-decoration: none; color: var(--foreground);">Behance</a>
-                        </div>
-                    <?php endif; ?>
+                    <a href="#" style="font-size: 1rem; text-decoration: none; color: var(--foreground);">Instagram</a>
+                </div>
+
+                <!-- WhatsApp -->
+                <div style="margin-top: 2rem;">
+                    <p class="section-label" style="margin-bottom: 1rem;">WHATSAPP</p>
+                    <a href="https://wa.me/5542999003021" target="_blank" rel="noopener noreferrer" class="btn">
+                        FALE CONOSCO
+                    </a>
                 </div>
             </div>
             

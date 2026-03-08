@@ -60,20 +60,3 @@
 </nav>
 
 <main id="main-content" class="site-main">
-
-<?php
-/**
- * Fallback menu if no menu is assigned
- */
-function union_fallback_menu() {
-    ?>
-    <ul class="nav-menu">
-        <li><a href="<?php echo esc_url(home_url('/projetos')); ?>">PROJETOS</a></li>
-        <li><a href="<?php echo esc_url(home_url('/servicos')); ?>">SERVIÇOS</a></li>
-        <li><a href="<?php echo esc_url(home_url('/sobre')); ?>">SOBRE</a></li>
-        <li><a href="<?php echo esc_url(home_url('/blog')); ?>">BLOG</a></li>
-        <li><a href="<?php echo esc_url(home_url('/contato')); ?>">CONTATO</a></li>
-    </ul>
-    <?php
-}
-?>

@@ -13,7 +13,7 @@ get_header();
 <article <?php post_class(); ?>>
     <header class="page-header" style="padding-top: 10rem; padding-bottom: 4rem;">
         <div class="container">
-            <h1 style="font-size: clamp(3rem, 8vw, 6rem); font-weight: 300; letter-spacing: -0.02em; line-height: 1.1;">
+            <h1 style="font-size: clamp(1.875rem, 4vw, 2.25rem); font-weight: 300; letter-spacing: -0.02em; line-height: 1.1;">
                 <?php the_title(); ?>
             </h1>
         </div>

@@ -3,7 +3,6 @@
  *
  * @package Union_Arquitetura
  */
-
 (function() {
     'use strict';
 
@@ -13,39 +12,39 @@
         initSmoothScroll();
         initRevealAnimations();
         initHeaderScroll();
+        initFormValidation();
     });
 
     /**
      * Mobile Menu Toggle
      */
     function initMobileMenu() {
-        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
         const mobileNav = document.querySelector('.mobile-navigation');
+        const body = document.body;
         
-        if (!menuToggle || !mobileNav) return;
+        if (!mobileToggle || !mobileNav) return;
 
-        menuToggle.addEventListener('click', function() {
-            const isOpen = mobileNav.getAttribute('aria-hidden') === 'false';
+        mobileToggle.addEventListener('click', function() {
+            mobileToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
             
-            mobileNav.setAttribute('aria-hidden', isOpen ? 'true' : 'false');
-            menuToggle.setAttribute('aria-expanded', !isOpen);
+            const isActive = mobileNav.classList.contains('active');
+            mobileNav.setAttribute('aria-hidden', !isActive);
+            mobileToggle.setAttribute('aria-expanded', isActive);
             
-            if (!isOpen) {
-                mobileNav.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-            } else {
-                mobileNav.style.display = 'none';
-                document.body.style.overflow = '';
-            }
+            body.style.overflow = isActive ? 'hidden' : '';
         });
 
         // Close menu when clicking a link
         const mobileLinks = mobileNav.querySelectorAll('a');
         mobileLinks.forEach(function(link) {
             link.addEventListener('click', function() {
+                mobileToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
                 mobileNav.setAttribute('aria-hidden', 'true');
-                mobileNav.style.display = 'none';
-                document.body.style.overflow = '';
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                body.style.overflow = '';
             });
         });
     }
@@ -60,14 +59,15 @@
             link.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
                 
-                if (href === '#') return;
+                if (href === '#' || !href) return;
                 
                 const target = document.querySelector(href);
                 
                 if (target) {
                     e.preventDefault();
                     
-                    const headerHeight = document.querySelector('.site-header').offsetHeight;
+                    const header = document.querySelector('.site-header');
+                    const headerHeight = header ? header.offsetHeight : 0;
                     const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
                     
                     window.scrollTo({
@@ -142,36 +142,6 @@
             
             lastScrollTop = scrollTop;
         }, { passive: true });
-    }
-
-    /**
-     * Lazy Loading Images (Native + Fallback)
-     */
-    function initLazyLoading() {
-        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
-        
-        if ('loading' in HTMLImageElement.prototype) {
-            // Native lazy loading supported
-            return;
-        }
-        
-        // Fallback for browsers without native support
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver(function(entries) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.classList.remove('lazy');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-
-            lazyImages.forEach(function(img) {
-                imageObserver.observe(img);
-            });
-        }
     }
 
     /**

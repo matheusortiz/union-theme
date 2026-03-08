@@ -142,9 +142,9 @@ $hero_bg = get_theme_mod('hero_background');
             <?php endif; ?>
         </div>
         
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="<?php echo esc_url(get_post_type_archive_link('projeto')); ?>" class="btn btn-outline">
-                VER TODOS OS PROJETOS
+        <div style="display: flex; justify-content: center; margin-top: 4rem;">
+            <a href="<?php echo esc_url(get_post_type_archive_link('projeto')); ?>" class="btn">
+                CONHEÇA OUTROS PROJETOS
             </a>
         </div>
     </div>
@@ -216,45 +216,38 @@ $hero_bg = get_theme_mod('hero_background');
                 
                 <div class="contact-info">
                     <p class="contact-label">E-MAIL</p>
-                    <a href="mailto:<?php echo esc_attr(get_theme_mod('contact_email', 'contato@unionarq.com.br')); ?>" class="contact-value">
-                        <?php echo esc_html(get_theme_mod('contact_email', 'contato@unionarq.com.br')); ?>
+                    <a href="mailto:<?php echo esc_attr(get_theme_mod('contact_email', 'eng.luana@unionengenharia.com')); ?>" class="contact-value">
+                        <?php echo esc_html(get_theme_mod('contact_email', 'eng.luana@unionengenharia.com')); ?>
                     </a>
                 </div>
                 
                 <div class="contact-info">
                     <p class="contact-label">TELEFONE</p>
-                    <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', get_theme_mod('contact_phone', '+5511999999999'))); ?>" class="contact-value">
-                        <?php echo esc_html(get_theme_mod('contact_phone', '+55 (11) 99999-9999')); ?>
+                    <a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', get_theme_mod('contact_phone', '+5542999003021'))); ?>" class="contact-value">
+                        <?php echo esc_html(get_theme_mod('contact_phone', '(42) 99900-3021')); ?>
                     </a>
                 </div>
                 
                 <div class="contact-info">
                     <p class="contact-label">ESCRITÓRIO</p>
                     <address class="contact-value" style="font-style: normal;">
-                        <?php echo nl2br(esc_html(get_theme_mod('contact_address', "Av. Paulista, 1234\nSão Paulo, SP 01310-100"))); ?>
+                        <?php echo nl2br(esc_html(get_theme_mod('contact_address', "Rua 294, 157, Sala 01\nMeia Praia - Itapema/SC"))); ?>
                     </address>
                 </div>
             </div>
             
             <div>
                 <p class="section-label" style="margin-bottom: 1.5rem;">SIGA-NOS</p>
-                
-                <?php $social_links = union_get_social_links(); ?>
-                <?php if (!empty($social_links)) : ?>
-                    <div style="margin-bottom: 3rem;">
-                        <?php foreach ($social_links as $network => $url) : ?>
-                            <a href="<?php echo esc_url($url); ?>" target="_blank" rel="noopener noreferrer" style="display: block; font-size: 1.25rem; color: var(--foreground); text-decoration: none; margin-bottom: 1rem; transition: var(--transition-fast);">
-                                <?php echo ucfirst($network); ?>
-                            </a>
-                        <?php endforeach; ?>
-                    </div>
-                <?php else : ?>
-                    <div style="margin-bottom: 3rem;">
-                        <a href="#" style="display: block; font-size: 1.25rem; color: var(--foreground); text-decoration: none; margin-bottom: 1rem;">Instagram</a>
-                        <a href="#" style="display: block; font-size: 1.25rem; color: var(--foreground); text-decoration: none; margin-bottom: 1rem;">LinkedIn</a>
-                        <a href="#" style="display: block; font-size: 1.25rem; color: var(--foreground); text-decoration: none;">Behance</a>
-                    </div>
-                <?php endif; ?>
+                <div style="margin-bottom: 3rem;">
+                    <a href="#" style="display: block; font-size: 1.25rem; color: var(--foreground); text-decoration: none; margin-bottom: 1rem;">Instagram</a>
+                </div>
+
+                <div style="margin-bottom: 3rem;">
+                    <p class="section-label" style="margin-bottom: 1rem;">WHATSAPP</p>
+                    <a href="https://wa.me/5542999003021" target="_blank" rel="noopener noreferrer" class="btn">
+                        FALE CONOSCO
+                    </a>
+                </div>
                 
                 <div style="padding-top: 3rem; border-top: 1px solid var(--border);">
                     <p style="color: var(--muted-foreground); line-height: 1.8;">
